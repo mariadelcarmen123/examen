@@ -1,0 +1,104 @@
+dato.h
+#pragma once
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Dato
+{
+private:
+	int id, cantidadDeAceite;
+	string nombreCliente;
+
+public:
+	Dato();
+	Dato(const int& id, const int& c, const string& cliente);
+
+	int getId();
+	int getCantidadDeAceite();
+	string getNombreCliente();
+
+	void setId(int id);
+	void setCantidadDeAceite(int c);
+	void getNombreCliente(string cliente);
+
+};
+
+
+
+dato.cpp
+#include "Dato.h"
+#include <iostream>
+
+using namespace std;
+
+Dato::Dato() {
+	id = 0;
+	cantidadDeAceite = 0;
+	nombreCliente = "";
+}
+
+
+Dato::Dato(const int& id, const int& c, const string& cliente){
+	this->id = id;
+	this->cantidadDeAceite = c;
+	this->nombreCliente = cliente;
+}
+
+int Dato::getId() {
+	return id;
+	}
+int Dato::getCantidadDeAceite() {
+	return cantidadDeAceite;
+	}
+string Dato::getNombreCliente() {
+	return nombreCliente;
+	}
+
+
+
+int setId(int id) {
+	cout << "Ingrese el ID:" << endl;
+	cin >> id;
+}
+int setCantidadDeAceite(int c) {
+	cout << "Ingrese la cantidad de aceite que requiere:"<< endl;
+	cin >>c;
+}
+string getNombreCliente(string cliente) {
+	cout << "Ingrese el nombre del cliente:"<<endl;
+	cin >> cliente;
+}
+
+
+
+nodo.h
+#pragma once
+#include "Dato.h"
+#include <iostream>
+
+class Nodo
+{
+public:
+	Dato Nodito;
+	Dato cima = -1;
+	Nodo* siguiente;
+
+	Nodo();
+	Nodo(const string& p);
+};
+
+
+nodo.cpp
+#include "Nodo.h"
+#include "Dato.h"
+
+Nodo::Nodo() {
+	Dato;
+	cima = NULL;
+}
+
+
+
+
+
